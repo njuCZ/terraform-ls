@@ -13,7 +13,6 @@ type configBlockFactory interface {
 	New(*hclsyntax.Block) (ConfigBlock, error)
 }
 
-
 type labelCandidates map[string][]CompletionCandidate
 
 type completableLabels struct {
