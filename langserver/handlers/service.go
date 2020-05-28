@@ -122,7 +122,7 @@ func (svc *service) Assigner() (jrpc2.Assigner, error) {
 				return nil, err
 			}
 			ctx = lsctx.WithFilesystem(fs, ctx)
-			return handle(ctx, req, TextDocumentDidChange)
+			return handle(ctx, req, lh.TextDocumentDidChange)
 		},
 		"textDocument/didOpen": func(ctx context.Context, req *jrpc2.Request) (interface{}, error) {
 			err := session.CheckInitializationIsConfirmed()

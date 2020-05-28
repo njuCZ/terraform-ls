@@ -81,7 +81,7 @@ func (c *CompletionCommand) Run(args []string) int {
 	fs.Open(ilsp.FileFromDocumentItem(lsp.TextDocumentItem{
 		URI:     lspUri,
 		Text:    string(content),
-		Version: 0,
+		Version: 1,
 	}))
 
 	d := &discovery.Discovery{}
